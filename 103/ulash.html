@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f7f2">
+  <meta name="description" content="Ortiqcha, yaroqli taomlarni isrof qilmaymiz. Yaqin atrofdagi taomlarni toping yoki ulashing.">
+  <title>Ulash — Yaxshi taom isrof bo‘lmasin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="ulash.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="Ulash bosh sahifa"><span class="brand-icon">u</span><span><b>ulash</b><small>Yaxshi taom isrof bo‘lmasin</small></span></a>
+      <nav aria-label="Asosiy menyu"><a class="nav-active" href="#taomlar">Taom topish</a><a href="#qanday">Qanday ishlaydi?</a><a href="#tasir">Ta’sirimiz</a></nav>
+      <div class="nav-actions"><button class="city-button" id="location-button" title="Joylashuvni aniqlash"><span>⌖</span><span id="city-label">Toshkent</span><small>⌄</small></button><button class="reservations-button" id="my-reservations">Bandlarim <span id="reservation-count">0</span></button><button class="partner-button" id="open-listing">Taom ulash <span>＋</span></button><button class="mobile-menu" id="mobile-menu" aria-label="Menyuni ochish">☰</button></div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero container">
+      <div class="hero-content">
+        <div class="eyebrow"><span></span> Mahallangizda yaxshilik aylanadi</div>
+        <h1>Yaxshi taom<br><em>isrof bo‘lmasin.</em></h1>
+        <p class="hero-lead">Restoran va do‘konlardagi ortiqcha, iste’molga yaroqli taomlarni yaqin atrofingizdan toping — arzon yoki bepul.</p>
+        <div class="hero-search" role="search"><span class="search-icon">⌕</span><input id="search-input" type="search" placeholder="Taom, restoran yoki hududni qidiring" aria-label="Taom, restoran yoki hududni qidiring"><button id="search-button">Qidirish <span>→</span></button></div>
+        <div class="hero-meta"><span><i class="meta-dot green"></i> Yaqin atrofdagi e’lonlar</span><span><i class="meta-dot orange"></i> Olib ketish bugun</span></div>
+      </div>
+      <div class="hero-visual" aria-label="Yangi tayyorlangan taomlar tasviri"><div class="hero-photo"><div class="photo-shade"></div><div class="photo-label"><span>Bugungi ulash</span><b>Yaxshilik dasturxondan boshlanadi.</b></div></div><div class="floating-stats"><span class="stat-icon">♡</span><div><b id="hero-meals">1 248</b><small>porsiya isrof bo‘lmadi</small></div><span class="stat-arrow">↗</span></div><div class="floating-note"><span>✳</span> Yaqin · Mazali · Mas’uliyatli</div></div>
+    </section>
+
+    <section class="impact-strip"><div class="container impact-inner"><div class="impact-intro"><span class="impact-mark">✳</span><div><b>Har bir porsiya ahamiyatli.</b><small>Bugun yaxshi taomni birga asraymiz.</small></div></div><div class="impact-metric"><b id="saved-count">1 248</b><small>porsiya saqlandi</small></div><div class="impact-metric"><b id="partner-count">38</b><small>hamkor joy</small></div><div class="impact-metric"><b>100%</b><small>insoniy niyat</small></div><span class="demo-tag">Namuna ma’lumotlari</span></div></section>
+
+    <section class="listings-section container" id="taomlar">
+      <div class="section-heading"><div><div class="eyebrow"><span></span> Yaqin atrofingizda</div><h2>Bugun nimalar bor?</h2><p>Taomni band qiling, ko‘rsatilgan vaqtda olib keting.</p></div><button class="map-toggle" id="map-toggle"><span>⌖</span> Xaritada ko‘rish</button></div>
+      <div class="filter-row"><div class="filters" role="group" aria-label="Taom turini tanlang"><button class="filter active" data-filter="all">Barchasi <span id="all-count">6</span></button><button class="filter" data-filter="free">Bepul</button><button class="filter" data-filter="discount">Chegirmali</button><button class="filter" data-filter="meal">Tayyor taom</button><button class="filter" data-filter="grocery">Mahsulotlar</button></div><button class="sort-button" id="sort-button">Eng yaqin <span>⌄</span></button></div>
+      <div id="map-panel" class="map-panel" hidden><div class="map-art"><span class="map-road road-one"></span><span class="map-road road-two"></span><span class="map-road road-three"></span><span class="map-pin pin-one">♨</span><span class="map-pin pin-two">♨</span><span class="map-pin pin-three">♨</span><span class="map-you">Siz</span><div class="map-caption">Xarita ko‘rinishi · Namuna joylashuvlar</div></div></div>
+      <div class="listing-grid" id="listing-grid" aria-live="polite"></div>
+      <div class="empty-state" id="empty-state" hidden><span>⌕</span><b>Hozircha mos e’lon topilmadi</b><small>Boshqa so‘z yoki filtr bilan qidirib ko‘ring.</small><button id="reset-filters">Filtrlarni tozalash</button></div>
+      <button class="load-more" id="load-more">Barcha e’lonlarni ko‘rish <span>↓</span></button>
+    </section>
+
+    <section class="how-section" id="qanday"><div class="container"><div class="section-heading light-heading"><div><div class="eyebrow"><span></span> Oson va tushunarli</div><h2>Yaxshilikka uch qadam.</h2><p>Bir necha daqiqada taom toping yoki taomingizni ulashing.</p></div><div class="step-counter">01 <span>—</span> 03</div></div><div class="steps-grid"><article class="how-card"><div class="step-top"><span class="step-no">01</span><span class="step-icon">⌕</span></div><h3>Yaqin taomni toping</h3><p>Hududingizdagi restoran va do‘konlarning bugungi e’lonlarini ko‘ring.</p><span class="step-decoration">01</span></article><article class="how-card emphasized"><div class="step-top"><span class="step-no">02</span><span class="step-icon">↗</span></div><h3>Band qilib qo‘ying</h3><p>Bepul yoki chegirmali porsiyani tanlab, olib ketish vaqtini belgilang.</p><span class="step-decoration">02</span></article><article class="how-card"><div class="step-top"><span class="step-no">03</span><span class="step-icon">♡</span></div><h3>Olib keting, baham ko‘ring</h3><p>Taomni belgilangan paytda oling. Har bir saqlangan porsiya — kichik g‘alaba.</p><span class="step-decoration">03</span></article></div></div></section>
+
+    <section class="partner-section container" id="tasir"><div class="partner-visual"><div class="partner-image"><div class="partner-stamp">Yaxshi<br>taom<br><b>ulashiladi</b></div></div><div class="partner-caption"><span>01 / 03</span> Mahalliy hamkorlarimiz bilan</div></div><div class="partner-copy"><div class="eyebrow"><span></span> Restoran va do‘konlar uchun</div><h2>Ortiqcha taom —<br><em>yangi imkoniyat.</em></h2><p>Sotilmay qolgan, lekin iste’molga yaroqli mahsulotni e’lon qiling. Siz isrofni kamaytirasiz, kimningdir kunini yaxshilaysiz.</p><div class="partner-benefits"><div><span>✓</span><p><b>Ortiqcha mahsulotni kamaytiring</b><small>Taomni tashlash o‘rniga, unga yangi dasturxon toping.</small></p></div><div><span>✓</span><p><b>Mahallangiz bilan bog‘laning</b><small>Yaqin atrofdagi odamlar sizning taklifingizni ko‘radi.</small></p></div><div><span>✓</span><p><b>Oson boshqaring</b><small>Porsiya, narx va olib ketish vaqtini o‘zingiz belgilang.</small></p></div></div><button class="primary-button" id="partner-cta">Hamkor sifatida qo‘shilish <span>→</span></button><small class="tax-note">Hamkorlik shartlari va soliq masalalari alohida kelishiladi.</small></div></section>
+
+    <section class="volunteer-section container"><div class="volunteer-card"><div class="volunteer-symbol">↗</div><div><span>Ko‘ngillilar uchun</span><h2>Bir taomni manzilga yetkazib, kunni o‘zgartiring.</h2><p>Bo‘sh vaqtingizda yaqin atrofdagi insonlarga yordam bering.</p></div><button id="volunteer-cta">Ko‘ngilli bo‘lish <b>→</b></button></div></section>
+    <section class="closing container"><div class="closing-content"><div><span class="closing-leaf">✳</span><h2>Bugun bir porsiya<br>isrof bo‘lmasin.</h2><p>Taomingizni ulashing yoki yaqin atrofingizdan toping.</p></div><div class="closing-actions"><button class="light-button" id="closing-find">Taom topish <span>⌕</span></button><button class="ghost-button" id="closing-share">Ulashish <span>↗</span></button></div></div></section>
+  </main>
+
+  <div class="modal-backdrop" id="modal-backdrop" aria-hidden="true"><section class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button class="modal-close" id="modal-close" aria-label="Yopish">×</button><div id="modal-content"></div></section></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <footer><div class="container footer-inner"><a class="brand" href="#top"><span class="brand-icon">u</span><span><b>ulash</b><small>Yaxshi taom isrof bo‘lmasin</small></span></a><p>Yaxshilik taqsimlanganda ko‘payadi.</p><div class="footer-links"><a href="#qanday">Qanday ishlaydi?</a><a href="#tasir">Hamkorlik</a><span>© 2026 Ulash</span></div></div></footer>
+  <script src="ulash.js"></script>
+</body>
+</html>

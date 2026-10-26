@@ -1,0 +1,9 @@
+const savedSkills=JSON.parse(localStorage.getItem('skill-barter-skills')||'[]');
+const balanceEl=document.getElementById('balance');
+let balance=Number(localStorage.getItem('skill-barter-balance')||4);
+balanceEl.textContent=balance.toFixed(1);
+const toast=(text)=>{const el=document.getElementById('toast');el.textContent=text;el.classList.add('show');setTimeout(()=>el.classList.remove('show'),2400)};
+document.querySelectorAll('.filter').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.filter').forEach(x=>x.classList.remove('active'));btn.classList.add('active');const filter=btn.dataset.filter;let visible=0;document.querySelectorAll('.skill-card').forEach(card=>{const show=filter==='all'||card.dataset.category===filter;card.style.display=show?'block':'none';if(show)visible++});document.getElementById('empty').style.display=visible?'none':'block'}));
+document.getElementById('search').addEventListener('input',(e)=>{const q=e.target.value.toLowerCase();let visible=0;document.querySelectorAll('.skill-card').forEach(card=>{const show=card.dataset.title.toLowerCase().includes(q);card.style.display=show?'block':'none';if(show)visible++});document.getElementById('empty').style.display=visible?'none':'block'});
+document.querySelectorAll('.exchange').forEach(btn=>btn.addEventListener('click',()=>{toast(`${btn.dataset.skill} uchun so‘rov yuborildi ✓`)}));
+document.getElementById('skill-form').addEventListener('submit',(e)=>{e.preventDefault();const name=document.getElementById('skill-name').value.trim();const category=document.getElementById('skill-category').value;savedSkills.push({name,category});localStorage.setItem('skill-barter-skills',JSON.stringify(savedSkills));document.getElementById('form-status').textContent=`“${name}” profilingizga qo‘shildi ✓`;document.getElementById('form-status').style.color='#4b9b79';e.target.reset();toast('Mahoratingiz qo‘shildi ✓')});

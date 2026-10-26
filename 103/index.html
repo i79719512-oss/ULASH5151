@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f4f3ed">
+<meta name="description" content="Yaqiningizdagi yaroqli taomlar va bolalar kiyimlarini toping, band qiling yoki ulashing.">
+<title>Ulash — taom va kiyimga ikkinchi imkon</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/app.css">
+<link rel="stylesheet" href="/site-extra.css">
+<link rel="stylesheet" href="/simple.css">
+</head>
+<body>
+<div class="notice-bar"><div class="wrap notice-inner"><span class="notice-dot"></span>
+<span>Yaqiningizga yordam bering yoki keraklisini toping.</span><a href="#qanday">Qanday ishlaydi
+↗</a></div></div>
+<header class="site-header"><div class="wrap nav">
+<a class="brand" href="#bosh" aria-label="Ulash bosh sahifa"><span class="brand-mark"><img src="/icon.svg" alt=""></span>
+<span class="brand-word">ulash<span>.</span><small>Yaqinlarga yordam</small></span></a>
+<nav class="main-nav" aria-label="Asosiy menyu"><a href="#taomlar">E’lonlar</a>
+<a href="#reyting">Reyting</a><a href="#qanday">Yordam</a><a href="#hamkor">Ulashish</a></nav>
+<div class="nav-actions"><button class="button button-quiet" id="account-open"
+hidden>Kabinetim</button>
+<button class="button button-quiet" id="auth-open">Kirish</button>
+<button class="button button-dark" id="partner-open">Ulashish</button>
+<button class="menu-toggle" id="menu-toggle" aria-label="Menyuni ochish"
+aria-expanded="false">☰</button></div></div>
+<nav class="mobile-nav" id="mobile-nav" hidden><a href="#taomlar">E’lonlarni ko‘rish</a>
+<a href="#reyting">Reyting</a><a href="#qanday">Qanday ishlaydi</a><a href="#hamkor">Ulashish haqida</a>
+<button type="button" id="mobile-auth-open">Kirish</button><button type="button" id="mobile-account-open" hidden>Kabinetim</button>
+<button type="button" id="mobile-share-open">E’lon joylash</button></nav></header>
+<main id="bosh">
+<section class="hero"><div class="wrap hero-grid"><div class="hero-copy">
+<div class="eyebrow"><span class="eyebrow-line"></span> MAHALLANGIZDAGI E’LONLAR</div>
+<h1>Keraklisini toping.<br><em>Yaxshilik ulashing.</em></h1>
+<p class="hero-lead">Arzon yoki bepul taom toping. Kichik bo‘lib qolgan bolalar kiyimini esa boshqalarga bering.</p>
+<div class="hero-actions"><a class="button button-dark button-large" href="#taomlar">E’lonlarni ko‘rish</a>
+<button class="button button-outline button-large" id="hero-partner">Taom yoki kiyim ulashish</button></div>
+<div class="hero-note"><span class="note-icon">✓</span>Band qiling, keyin ko‘rsatilgan joydan olib keting.</div>
+</div><div class="hero-art"><div class="art-frame art-main">
+<img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format"
+alt="Yangi tayyorlangan rang-barang taom" fetchpriority="high"><div class="art-shade"></div>
+<div class="art-caption"><span class="caption-kicker">YAXSHILIKNI ULASHING</span><strong>Bir
+porsiya.<br>Bir imkon.</strong></div></div>
+<div class="art-frame art-small"><img
+src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format"
+alt="Yangi pishirilgan nonlar" loading="lazy"></div><div class="art-stamp"><span>u</span>
+<small>MAHALLADAN · MAHALLAGA · YAXSHILIK</small></div>
+<div class="art-tag"><span>✳</span><span>Isrof
+emas,<br><b>ulashish</b></span></div></div></div></section>
+<section class="search-section"><div class="wrap search-box"><form id="search-form"
+class="search-form">
+<label class="search-input-wrap" for="search-query"><span class="search-icon">⌕</span><span>
+<span class="field-overline">NIMA KERAK?</span>
+<input id="search-query" type="search" placeholder="Masalan: palov, kurtka, Chilonzor"
+autocomplete="off"></span></label>
+<div class="search-divider"></div><button class="location-action" id="location-action"
+type="button">
+<span class="location-icon">⌖</span><span><span class="field-overline">YAQINROQDAGI E’LONLAR</span>
+<strong id="location-label">Joylashuvimni aniqlash</strong></span></button>
+<button class="button button-green search-submit">Qidirish →</button></form>
+<div class="search-hint"><span class="live-dot"></span> E’lonlar hamkorlar joylagan paytda
+ko‘rinadi</div></div></section>
+<section class="impact-section"><div class="wrap impact-grid">
+<div class="impact-intro"><span class="impact-symbol">✳</span><div><b>Birgalikda qilgan ishimiz</b>
+<span>Saytdagi haqiqiy e’lonlar va bandlar.</span></div></div>
+<div class="impact-metric"><strong id="metric-saved">—</strong><span>olib ketilgan
+dona / porsiya</span></div>
+<div class="impact-metric"><strong id="metric-listings">—</strong><span>hozirgi
+e’lonlar</span></div>
+<div class="impact-metric"><strong id="metric-partners">—</strong><span>hamkor
+tashkilot</span></div><div class="impact-metric"><strong id="metric-weight">—</strong><span>qutqarilgan vazn</span></div></div></section>
+<section class="food-section section-pad" id="taomlar"><div class="wrap">
+<div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> BUGUNGI
+IMKONIYATLAR</div>
+<h2>Yaqin atrofdagi e’lonlar</h2><p>Taom yoki kiyimni tanlang, keyin band qiling.</p></div>
+<div class="listings-meta"><span class="live-dot"></span><span id="results-label">E’lonlar
+yuklanmoqda</span></div></div>
+<div class="filter-toolbar"><div class="filter-list" role="group" aria-label="Taklifni filtrlash">
+<button class="filter-chip active" data-deal="">Barchasi</button>
+<button class="filter-chip" data-deal="free">Bepul</button>
+<button class="filter-chip" data-deal="discount">Arzon</button><span
+class="filter-separator"></span>
+<button class="filter-chip filter-category" data-category="meal">Taom</button>
+<button class="filter-chip filter-category" data-category="grocery">Oziq-ovqat</button>
+<button class="filter-chip filter-category" data-category="clothing">Kiyim</button></div>
+<label class="sort-control">Tartiblash<select id="sort-select" aria-label="Tartiblash">
+<option value="soon">Olib ketish vaqti</option><option value="price">Narxi: arzonidan</option>
+<option value="distance">Masofa: yaqindan</option></select></label></div>
+<div class="listing-grid" id="listing-grid" aria-live="polite"></div>
+<div class="loading-state" id="loading-state"><span class="spinner"></span> Haqiqiy e’lonlar
+yuklanmoqda…</div>
+<div class="empty-state" id="empty-state" hidden><span class="empty-icon">⌕</span>
+<h3>Hozircha e’lon yo‘q</h3><p>Hudud yoki filtrni o‘zgartirib ko‘ring.
+Yangi taom joylanganda shu yerda paydo bo‘ladi.</p>
+<button class="button button-outline" id="clear-filters">Qidiruvni tozalash</button></div>
+<div class="error-state" id="error-state" hidden><b>Ulanish amalga oshmadi.</b>
+<span id="error-message">Server bilan bog‘lanib bo‘lmadi.</span>
+<button id="retry-load" class="text-link">Qayta urinish →</button></div></div></section>
+<section class="rating-section section-pad" id="reyting"><div class="wrap">
+<div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> HAMJAMIYAT E’TIROFI</div>
+<h2>Yaxshilikni ko‘paytirayotgan <em>hamkorlar.</em></h2><p>Reyting olib ketilgan porsiyalar va foydalanuvchi baholariga asoslanadi.</p></div></div>
+<div id="partner-leaderboard" class="leaderboard-grid" aria-live="polite"><div class="loading-state"><span class="spinner"></span> Reyting yuklanmoqda…</div></div>
+</div></section>
+<section class="how-section section-pad" id="qanday"><div class="wrap">
+<div class="how-heading"><div><div class="eyebrow eyebrow-light"><span class="eyebrow-line"></span>
+OSON VA OCHIQ</div>
+<h2>Foydalanish oson.</h2></div>
+<p>Uch qadamda e’lon toping yoki ulashing.</p></div>
+<div class="steps-grid">
+<article class="step-card"><span class="step-number">01</span><span class="step-icon">⌕</span>
+<h3>Qidiring</h3><p>Taom yoki kiyimni, narxini va olib ketish vaqtini ko‘ring.</p></article>
+<article class="step-card"><span class="step-number">02</span><span class="step-icon">↗</span>
+<h3>Band qiling</h3><p>Olish uchun kerakli miqdorni tanlang. Band ma’lumoti kabinetingizda turadi.</p></article>
+<article class="step-card"><span class="step-number">03</span><span class="step-icon">✳</span>
+<h3>Olib keting</h3><p>Manzil va vaqtni ko‘rib, e’lon egasidan olib keting. To‘lov bo‘lsa, bevosita egasiga beriladi.</p></article></div>
+<p class="safety-note">ⓘ Taom xavfsizligi bo‘yicha hamkorning tasdiq bayonoti olinadi, ammo bu mustaqil tekshiruv yoki xavfsizlik kafolati emas. Allergenlarni band qilishdan oldin tekshiring.</p></div></section>
+<section class="partner-section section-pad" id="hamkor"><div class="wrap partner-card">
+<div class="partner-copy"><div class="eyebrow"><span class="eyebrow-line"></span> KAFE, RESTORAN VA
+DO‘KONLAR UCHUN</div>
+<h2>Taom yoki kiyim ulashing.</h2>
+<p>Kafe, do‘kon yoki oilangizdagi ortiqcha narsani e’lon qiling. Boshqalar topib, band qilishi mumkin.</p>
+<button class="button button-dark button-large" id="partner-join">Kafe yoki do‘kon sifatida</button>
+<button class="text-link" id="donor-join">Oilamdan kiyim ulashaman</button>
+<small>Boshlash uchun bepul akkaunt oching.</small></div>
+<div class="partner-art"><img
+src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format"
+alt="Mahalliy restorandagi dasturxon" loading="lazy"><div class="partner-art-label">
+<span class="mini-mark">u</span><span><b>Yaxshilik birga ko‘payadi</b><small>Mahalliy hamkorlar
+bilan</small></span></div></div>
+</div></section>
+<section class="trust-section section-pad"><div class="wrap trust-grid">
+<div><div class="eyebrow"><span class="eyebrow-line"></span> OCHIQ-OSHKORA</div><h2>Ishonch
+—<br><em>har qadamda.</em></h2></div>
+<div class="trust-item"><span>01</span><div><h3>Soxta sonlar yo‘q</h3>
+<p>Natijalar band qilingan va olib ketilgan e’lonlardan hisoblanadi.</p></div></div>
+<div class="trust-item"><span>02</span><div><h3>Bandlar kuzatuvda</h3>
+<p>Buyurtma kodi va holati shaxsiy kabinetda ko‘rinadi.</p></div></div>
+<div class="trust-item"><span>03</span><div><h3>O‘z vaqtida xabardor</h3>
+<p>Band yoki yetkazish holati o‘zgarsa, bildirishnoma yangilanadi.</p></div></div>
+</div></section>
+<section class="workspace-section" id="workspace" hidden><div class="wrap">
+<div class="workspace-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> SHAXSIY
+HUDUD</div>
+<h2 id="workspace-title">Kabinetim</h2></div><div class="workspace-actions">
+<span id="user-label"></span><button class="button button-outline"
+id="logout-button">Chiqish</button></div></div>
+<div id="workspace-content" class="workspace-content"></div></div></section>
+</main>
+<footer class="site-footer"><div class="wrap footer-main">
+<a class="brand brand-footer" href="#bosh"><span class="brand-mark"><img src="/icon.svg" alt=""></span>
+<span class="brand-word">ulash<span>.</span><small>Taom va kiyimga ikkinchi imkon</small></span></a>
+<p>Yaxshi taom isrof bo‘lmasin.<br>Mahallamizda yaxshilik ko‘paysin.</p>
+<nav><a href="#taomlar">Taom topish</a><a href="#qanday">Qanday ishlaydi</a>
+<a href="#hamkor">Hamkorlik</a></nav></div>
+<div class="wrap footer-bottom"><span>© <span id="year"></span> Ulash</span>
+<span>O‘zbekiston uchun, mehr bilan.</span><a href="#qanday">Taom xavfsizligi</a></div>
+<p class="wrap legal-note">Ulash band qilish va hamkorlik platformasidir. Aniq olib ketish manzili band tasdiqlangach ko‘rsatiladi. Taom sifati va xavfsizligi
+uchun uni joylagan hamkor javobgar.
+Chegirmali e’lonlar bo‘yicha to‘lov bevosita hamkorga qilinadi.</p></footer>
+<dialog class="modal" id="auth-modal" aria-labelledby="auth-title"><div class="modal-shell">
+<button class="modal-close" data-close="auth-modal" aria-label="Yopish">×</button><div
+id="auth-content"></div>
+</div></dialog>
+<dialog class="modal" id="action-modal" aria-label="Ulash xizmati"><div class="modal-shell">
+<button class="modal-close" data-close="action-modal" aria-label="Yopish">×</button><div
+id="action-content"></div>
+</div></dialog>
+<div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+<script src="/app.js" defer></script>
+</body></html>

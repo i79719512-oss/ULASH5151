@@ -1,0 +1,8 @@
+{
+  "name": "ulash-food-rescue",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=24.0.0" },
+  "scripts": { "start": "node backend.js", "test": "node --test" }
+}
